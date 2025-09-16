@@ -30,7 +30,7 @@ type Movie struct {
 var list []Movie
 
 func moviePageHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("templates/moviePage.html")
+	tmpl, err := template.ParseFiles("./templates/moviePage.html")
 	if err != nil {
 		http.Error(w, "Ошибка шаблона", http.StatusInternalServerError)
 		log.Printf("Ошибка шаблона: %v", err)
@@ -154,7 +154,7 @@ func allMoviesHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func movieHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("templates/index.html")
+	tmpl, err := template.ParseFiles("./templates/index.html")
 	if err != nil {
 		http.Error(w, "Ошибка шаблона", http.StatusInternalServerError)
 		log.Printf("Ошибка шаблона: %v", err)
@@ -172,7 +172,7 @@ func movieHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func AddMovieHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("templates/addMovie.html")
+	tmpl, err := template.ParseFiles("./templates/addMovie.html")
 	if err != nil {
 		http.Error(w, "Ошибка шаблона", http.StatusInternalServerError)
 		log.Printf("Ошибка шаблона: %v", err)

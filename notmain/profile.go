@@ -72,7 +72,7 @@ func RemoveFromProfileHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func ProfilePageHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("templates/profile.html")
+	tmpl, err := template.ParseFiles("./templates/profile.html")
 	if err != nil {
 		http.Error(w, "Ошибка шаблона", http.StatusInternalServerError)
 		log.Printf("Ошибка шаблона: %v", err)

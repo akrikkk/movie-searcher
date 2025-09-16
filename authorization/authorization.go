@@ -34,7 +34,7 @@ func CheckPassword(password, hash string) bool {
 }
 
 func AuthHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("templates/auth.html")
+	tmpl, err := template.ParseFiles("./templates/auth.html")
 	if err != nil {
 		http.Error(w, "Ошибка шаблона", http.StatusInternalServerError)
 		log.Printf("Ошибка шаблона: %v", err)

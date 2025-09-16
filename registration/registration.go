@@ -11,7 +11,7 @@ import (
 )
 
 func RegistrationHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("templates/registration.html")
+	tmpl, err := template.ParseFiles("./templates/registration.html")
 	if err != nil {
 		http.Error(w, "Ошибка шаблона", http.StatusInternalServerError)
 		log.Printf("Ошибка шаблона: %v", err)

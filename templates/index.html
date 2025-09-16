@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Movie Searcher</title>
+    <link rel="stylesheet" href="/sin/style.css">
+  </head>
+<body>
+    <div class="container">
+        <h1>Случайный фильм</h1>
+
+        <p>{{.Title}} ({{.Genre}} {{.Country}}) - {{.Year}} 
+            <span class="movie-rating">{{.Rating}}</span>
+        </p>  
+
+        <div class="movie-description">{{.Description}}</div>
+        <img src="{{.PhotoUrl}}" alt="{{.Title}}" class="movie-poster">
+
+        <form action="/add-to-profile" method="POST" style="margin-top: 15px;">
+            <input type="hidden" name="movie_id" value="{{.ID}}">
+            <button type="submit" class="watched-button">Просмотрено</button>
+        </form>
+
+        <div class="links" style="margin-top: 20px;">
+            <a href="/add-movie" class="add-movie-link">Добавить фильм</a>
+            <a href="/allMovies" class="all-movie-link">Все фильмы</a>
+            <a href="/start" class="start-page">Другой фильм</a>
+            <form action="/profile" method="get" style="margin-top: 15px;">
+            <button type="submit" class="profile-button">Мой профиль</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

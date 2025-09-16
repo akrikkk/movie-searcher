@@ -1,0 +1,106 @@
+body {
+    background-image: url('/sin/fff.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+}
+
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffdd59;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.movie-description {
+    margin: 15px 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.movie-poster {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.movie-poster:hover {
+    transform: scale(1.05);
+}
+
+.movie-rating {
+    font-weight: bold;
+    color: #00e0ff;
+    font-size: 1.2em;
+}
+
+.watched-button,
+.profile-button {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 8px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.watched-button:hover,
+.profile-button:hover {
+    background-color: #487df0;
+    transform: scale(1.05);
+}
+
+.links a {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 8px 15px;
+    background-color: #5053ff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #22b9ff;
+    transform: scale(1.05);
+}
+
+.profile-button {
+    background-color: #620c9b;
+    color: black;
+}
+
+.profile-button:hover {
+    background-color: #447ce4;
+    transform: scale(1.05);
+}

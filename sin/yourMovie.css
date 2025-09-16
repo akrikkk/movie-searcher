@@ -1,0 +1,66 @@
+body {
+    background-image: url("aaaa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}   
+
+
+form {
+    background: rgba(34, 33, 33, 0.75); 
+    padding: 25px;
+    margin: 50px auto;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+form label {
+    display: block;
+    margin-bottom: 12px;
+    color: #f0f0f0; 
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 5px;
+    background: #222; 
+    color: #fff;      
+}
+
+
+form button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #00aaff;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+form a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #a0e0ff; 
+    text-decoration: none;
+}
+form a:hover {
+    text-decoration: underline;
+}

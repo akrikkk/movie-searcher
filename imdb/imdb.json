@@ -1,0 +1,14 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "id": 123,
+      "title": "Interstellar",
+      "overview": "Описание фильма...",
+      "release_date": "2014-11-05",
+      "vote_average": 8.6,
+      "poster_path": "/abc123.jpg"
+    }
+  ],
+  "total_pages": 500
+}

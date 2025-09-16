@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Добавь фильм!</title>
+    <link rel="stylesheet" href="/sin/yourMovie.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap&subset=cyrillic" rel="stylesheet">
+  </head>
+<body>
+  <form action="/add-movie" method="post">
+      <label>Название фильма<input type="text" name="title" required></label>
+      <br>
+      <label>Жанр фильма<input type="text" name="genre" required></label>
+      <br>
+      <label>Страна фильма<input type="text" name="country" required></label>
+      <br>
+      <label>Год выпуска<input type="number" name="year" required></label>
+      <br>
+      <label>Рейтинг<input type="number" name="rating" step="0.1" required></label>
+      <br>
+      <label>Описание<input type="text" name="description" required></label>
+      <br>
+      <label>URL постера<input type="text" name="photourl" required></label>
+      <br>
+      <button type="submit">Добавить фильм</button>
+      <a href="/start">← Назад к фильмам</a>
+  </form>
+</body> 
+</html> 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/sin/moviePage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap&subset=cyrillic" rel="stylesheet">
+  </head>
+  <body>
+    <div class="movie-container">
+  <img src="{{.PhotoUrl}}" alt="{{.Title}}">
+  <div class="movie-details">
+    <h2>{{.Title}}</h2>
+    <p>Жанр: {{.Genre}}</p>
+    <p>Страна: {{.Country}}</p>
+    <p>Год: {{.Year}}</p>
+    <p>Рейтинг: {{.Rating}}</p>
+    <p>Описание: {{.Description}}</p>
+    <a href="/allMovies" class="back-link">← Назад к списку фильмов</a>
+  </div>
+</div>
+
+  </body>
+</html>

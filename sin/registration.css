@@ -1,0 +1,78 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-container {
+    background: #1e1e1e;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    width: 350px;
+    text-align: center;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.registration-container h1 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.registration-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.registration-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    background: #2c2c2c;
+    color: #fff;
+}
+
+.registration-container input:focus {
+    outline: 2px solid #4a90e2;
+}
+
+.registration-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4a90e2;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.registration-container button:hover {
+    background: #357abd;
+}
+
+.registration-container a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.registration-container a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

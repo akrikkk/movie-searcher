@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Избранные фильмы</title>
+</head>
+<body>
+    <h1>Избранные фильмы</h1>
+
+    {{if .}}
+        <ul>
+        {{range .}}
+            <li>
+                <b>{{.Title}}</b> ({{.Year}}) — {{.Country}}, рейтинг: {{.Rating}}
+                <img src="{{.Poster}}" alt="{{.Title}}" width="150">
+            </li>
+        {{end}}
+        </ul>
+    {{else}}
+        <p>Нет избранных фильмов</p>
+    {{end}}
+
+    <a href="/">Назад</a>
+</body>
+</html>

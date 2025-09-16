@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Просмотренные фильмы</title>
+    <link rel="stylesheet" href="/sin/profile.css">
+</head>
+<body>
+    <div class="container">
+        <h1><a href="/start" class="start-page">Случайный фильм</a></h1>
+        <h1><a href="/allMovies" class="all-movie-link">Все фильмы</a></h1>
+
+        {{if .Movies}}
+        <div class="movie-list">
+            {{range .Movies}}
+            <div class="movie-card">
+                <img src="{{.PhotoUrl}}" alt="{{.Title}}" class="movie-poster">
+                <div class="movie-info">
+                    <h3>{{.Title}} ({{.Year}})</h3>
+                    <span class="movie-rating">{{.Rating}}</span>
+                    <form action="/remove-from-profile" method="POST" style="margin-top: 10px;">
+                        <input type="hidden" name="movie_id" value="{{.ID}}">
+                        <button type="submit" class="remove-button">Удалить</button>
+                    </form>
+                </div>  
+            </div>
+            {{end}}
+        </div>
+        {{else}}
+        <p>Вы ещё не смотрели ни одного фильма.</p>
+        {{end}}
+    </div>
+</body>
+</html>

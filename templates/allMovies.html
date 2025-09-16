@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Все фильмы</title>
+    <link rel="stylesheet" href="/sin/allMovies.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Все фильмы</h1>
+
+        <form method="GET" action="/allMovies" class="filter-form">
+            <label for="genre">Жанр:</label>
+            <select name="genre" id="genre">
+                <option value="">Все</option>
+                {{range .Genres}}
+                <option value="{{.}}">{{.}}</option>
+                {{end}}
+            </select>
+
+            <label for="year">Год:</label>
+            <select name="year" id="year">
+                <option value="">Все</option>
+                {{range .Years}}
+                <option value="{{.}}">{{.}}</option>
+                {{end}}
+            </select>
+
+            <label for="country">Страна:</label>
+            <select name="country" id="country">
+                <option value="">Все</option>
+                {{range .Countries}}
+                <option value="{{.}}">{{.}}</option>
+                {{end}}
+            </select>
+
+            <button type="submit">Применить фильтры</button>
+        </form>
+
+        <ul class="movies-list">
+            {{range .Movies}}
+            <li class="movie-card">
+                <a href="/moviePage?id={{.ID}}">
+                    <img src="{{.PhotoUrl}}" alt="{{.Title}}" class="movie-poster">
+                    <h2>{{.Title}}</h2>
+                    <p>Жанр: {{.Genre}}</p>
+                    <p>Страна: {{.Country}}</p>
+                    <p>Год: {{.Year}}</p>
+                    <p>Рейтинг: {{.Rating}}</p>
+                </a>
+                <form action="/add-to-profile" method="POST" class="watched-form">
+                    <input type="hidden" name="movie_id" value="{{.ID}}">
+                    <button type="submit" class="watched-button">Просмотрено</button>
+                </form>
+            </li>
+            {{end}}
+        </ul>
+
+        <a href="/start" class="back-link">← Назад к фильмам</a>
+    </div>
+</body>
+</html>

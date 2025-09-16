@@ -48,7 +48,7 @@ func AuthHandler(w http.ResponseWriter, r *http.Request) {
 	username := r.FormValue("username")
 	password := r.FormValue("password_hash")
 
-	db, err := sql.Open("sqlite", "C:/Users/akiri/yanprojects/sql/movies.db")
+	db, err := sql.Open("sqlite", "./sql/movies.db")
 	if err != nil {
 		http.Error(w, "Ошибка подключения к bd", http.StatusInternalServerError)
 		log.Printf("Ошибка подключения к bd: %v", err)

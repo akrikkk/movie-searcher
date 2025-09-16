@@ -36,7 +36,7 @@ func moviePageHandler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Ошибка шаблона: %v", err)
 		return
 	}
-	db, err := sql.Open("sqlite", "C:/Users/akiri/yanprojects/sql/movies.db")
+	db, err := sql.Open("sqlite", "./sql/movies.db")
 	if err != nil {
 		http.Error(w, "Ошибка подключения к bd", http.StatusInternalServerError)
 		log.Printf("Ошибка подключения к bd: %v", err)
@@ -68,7 +68,7 @@ func allMoviesHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	db, err := sql.Open("sqlite", "C:/Users/akiri/yanprojects/sql/movies.db")
+	db, err := sql.Open("sqlite", "./sql/movies.db")
 	if err != nil {
 		http.Error(w, "Ошибка подключения к БД", http.StatusInternalServerError)
 		return
@@ -192,7 +192,7 @@ func AddMovieHandler(w http.ResponseWriter, r *http.Request) {
 		description := r.FormValue("description")
 		photourl := r.FormValue("photourl")
 
-		db, err := sql.Open("sqlite", "C:/Users/akiri/yanprojects/sql/movies.db")
+		db, err := sql.Open("sqlite", "./sql/movies.db")
 		if err != nil {
 			http.Error(w, "Ошибка подключения к bd", http.StatusInternalServerError)
 			log.Printf("Ошибка подключения к bd: %v", err)
@@ -225,7 +225,7 @@ func AddMovieHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	db, err := sql.Open("sqlite", "C:/Users/akiri/yanprojects/sql/movies.db")
+	db, err := sql.Open("sqlite", "./sql/movies.db")
 	if err != nil {
 		log.Printf("Ошибка подключения к bd")
 	}
@@ -251,7 +251,7 @@ func main() {
 		list = append(list, movie)
 	}
 
-	notmain.DB, err = sql.Open("sqlite", "C:/Users/akiri/yanprojects/sql/movies.db")
+	notmain.DB, err = sql.Open("sqlite", "./sql/movies.db")
 	if err != nil {
 		log.Fatal("Ошибка подключения к базе:", err)
 	}

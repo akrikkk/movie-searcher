@@ -62,7 +62,7 @@ func moviePageHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func allMoviesHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("./templates/AllMovies.html")
+	tmpl, err := template.ParseFiles("./templates/allMovies.html")
 	if err != nil {
 		http.Error(w, "Ошибка шаблона", http.StatusInternalServerError)
 		return
